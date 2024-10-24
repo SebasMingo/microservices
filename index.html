@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos y Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Gestión de Productos</h1>
+        <form id="formProducto" onsubmit="crearProducto(); return false;">
+            <input type="text" id="nombreProducto" placeholder="Nombre del Producto" required>
+            <input type="number" id="precioProducto" placeholder="Precio" step="0.01" required>
+            <input type="number" id="stockProducto" placeholder="Stock" min="0" required>
+            <button type="submit">Crear Producto</button>
+        </form>
+        <div id="productos">
+            <!-- Listado de productos aparecerá aquí -->
+        </div>
+    </section>
+
+    <section class="container">
+        <h1>Carrito</h1>
+        <form id="formPedido" onsubmit="crearPedido(); return false;">
+            <input type="text" id="productosPedido" placeholder="Productos (ej. Producto1)" required>
+            <input type="number" id="cantidadPedido" placeholder="Cantidad" min="1" required>
+            <button type="submit">Crear Pedido</button>
+        </form>
+        <div id="pedidos">
+            <!-- Listado de pedidos aparecerá aquí -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
